@@ -47,7 +47,8 @@ const BookAddBtnUpload = () => {
       },
     };
     const url = `${config.baseURI}/api/book`;
-    const res = await Axios.post(url, formData, params);
+    await Axios.post(url, formData, params);
+    window.location.reload();
   };
   const handleChangeValue = (e) => {
     const newStateE = {

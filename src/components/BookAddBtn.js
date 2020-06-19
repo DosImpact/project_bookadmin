@@ -31,8 +31,8 @@ const BookAddBtn = () => {
     e.preventDefault();
     handleClose();
     const url = `${config.baseURI}/api/book/add`;
-    const res = await Axios.post(url, state);
-    console.log(res);
+    await Axios.post(url, state);
+    window.location.reload();
   };
   const handleChangeValue = (e) => {
     const newStateE = {

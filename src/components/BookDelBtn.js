@@ -7,7 +7,7 @@ function BookDelBtn({ id }) {
   const handleDel = async () => {
     console.log("del");
     const url = `${config.baseURI}/api/book/${id}`;
-    const res = await Axios.delete(url, { method: "DELETE" });
+    await Axios.delete(url, { method: "DELETE" });
     window.location.reload();
   };
 
