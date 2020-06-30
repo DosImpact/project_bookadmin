@@ -29,7 +29,8 @@
 
 ```
 node_modules
-public.dockerignore
+build
+.dockerignore
 Dockerfile
 Dockerfile.prod
 ```
