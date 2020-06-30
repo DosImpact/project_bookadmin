@@ -66,14 +66,13 @@ docker build -t bookadmin_react:1.0.0 .
 - STEP4 execution docker image
 
 ```
-docker run --name bookadmin_front_server -itd -p 4441:5000 bookadmin_react:1.0.0
+docker run --name bookadmin_front_server -itd -p 4441:3000 bookadmin_react:1.0.0
 
 ```
 
 - STEP5 check container and monit
 
 ```
-docker run --name bookadmin_front_server -itd -p 4441:5000 bookadmin_react:1.0.0
+docker run --name bookadmin_front_server -itd -p 4441:3000 bookadmin_react:1.0.0
 docker attach -it bookadmin_front_server bash
-
 ```
