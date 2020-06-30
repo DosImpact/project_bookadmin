@@ -27,11 +27,11 @@
 
 - STEP1 .dockerignore
 
-```js
-node_modules;
-public.dockerignore;
-Dockerfile;
-Dockerfile.prod;
+```
+node_modules
+public.dockerignore
+Dockerfile
+Dockerfile.prod
 ```
 
 - STEP2 DockerFile
@@ -52,24 +52,24 @@ RUN npm install react-scripts@3.4.1 -g
 
 
 EXPOSE 3000
-#CMD pm2 start ./src/server.js -i max
+
 CMD npm start
 ```
 
-- STEP4 build docker file
+- STEP3 build docker file
 
 ```
 docker build -t bookadmin_react:1.0.0 .
 ```
 
-- STEP5 execution docker image
+- STEP4 execution docker image
 
 ```
 docker run --name bookadmin_front_server -itd -p 4441:5000 bookadmin_react:1.0.0
 
 ```
 
-- STEP6 check container and monit
+- STEP5 check container and monit
 
 ```
 docker run --name bookadmin_front_server -itd -p 4441:5000 bookadmin_react:1.0.0
